@@ -27,26 +27,6 @@ const testimonials = [
     rating: 4,
   },
 ];
-
-const certifications = [
-  {
-    name: "Climate Neutral",
-    logo: "/images/climate-neutral.png", // Replace with actual local path
-  },
-  {
-    name: "Cradle to Cradle",
-    logo: "/images/cradle-to-cradle.png",
-  },
-  {
-    name: "FSC Certified",
-    logo: "/images/fsc-certified.png",
-  },
-  {
-    name: "1% For The Planet",
-    logo: "/images/1-percent-for-the-planet.png",
-  },
-];
-
 const Testimonials = () => {
   return (
     <section id="testimonials" className="section-padding bg-white">
