@@ -9,7 +9,7 @@ const productImages = [
     alt: "Sustainable bamboo product",
   },
   {
-    url: "https://images.unsplash.com/photo-1581579185169-bf3dc5f56a91?auto=format&fit=crop&w=1200&q=80",
+    url: "https://plus.unsplash.com/premium_photo-1737340378210-5445e13735ff?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Eco-friendly packaging",
   },
   {
