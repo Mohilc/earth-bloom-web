@@ -27,6 +27,24 @@ const testimonials = [
     rating: 4,
   },
 ];
+const certifications = [
+  {
+    name: "Climate Neutral",
+    logo: "https://via.placeholder.com/64?text=CN",
+  },
+  {
+    name: "Cradle to Cradle",
+    logo: "https://via.placeholder.com/64?text=C2C",
+  },
+  {
+    name: "FSC Certified",
+    logo: "https://via.placeholder.com/64?text=FSC",
+  },
+  {
+    name: "1% For The Planet",
+    logo: "https://via.placeholder.com/64?text=1P",
+  },
+];
 const Testimonials = () => {
   return (
     <section id="testimonials" className="section-padding bg-white">
