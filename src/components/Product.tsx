@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 
 const productImages = [
   {
-    url: "https://images.unsplash.com/photo-1582582421374-d2a62b0f1a1f?auto=format&fit=crop&w=1200&q=80",
+    url: "https://images.unsplash.com/photo-1589365252845-092198ba5334?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Sustainable bamboo product",
   },
   {
