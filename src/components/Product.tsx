@@ -2,21 +2,21 @@
 import React, { useState } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
 const productImages = [
   {
     url: "https://images.unsplash.com/photo-1590080876009-7f6b8cbdff3b?auto=format&fit=crop&w=1200&q=80",
     alt: "Sustainable bamboo product",
   },
   {
-  url: "https://images.unsplash.com/photo-1586864387784-a0c6f8916c78?auto=format&fit=crop&w=1200&q=80",
-  alt: "Eco-friendly packaging",
-},
+    url: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=1200&q=80",
+    alt: "Eco-friendly packaging",
+  },
   {
     url: "https://images.unsplash.com/photo-1580910051073-3b7b3cf6ab2f?auto=format&fit=crop&w=1200&q=80",
     alt: "Product in use",
   },
 ];
+
 
 
 const Product = () => {
