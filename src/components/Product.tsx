@@ -5,18 +5,19 @@ import { Button } from '@/components/ui/button';
 
 const productImages = [
   {
-    url: "https://images.unsplash.com/photo-1589365252845-092198ba5334?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    url: "https://images.unsplash.com/photo-1589365252845-092198ba5334?auto=format&fit=crop&w=1200&q=80",
     alt: "Sustainable bamboo product",
   },
   {
-    url: "https://plus.unsplash.com/premium_photo-1737340378210-5445e13735ff?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    url: "https://images.unsplash.com/photo-1598514982846-e7bcdde9f879?auto=format&fit=crop&w=1200&q=80",
     alt: "Eco-friendly packaging",
   },
   {
-    url: "https://plus.unsplash.com/premium_photo-1736839336176-f305d421697d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    url: "https://images.unsplash.com/photo-1601048378241-d80e6f20b0f1?auto=format&fit=crop&w=1200&q=80",
     alt: "Product in use",
   },
 ];
+
 const Product = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
