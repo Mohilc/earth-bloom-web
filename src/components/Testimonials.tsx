@@ -29,15 +29,15 @@ const testimonials = [
 const certifications = [
   {
     name: "Climate Neutral",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Climate_neutral_label.svg/240px-Climate_neutral_label.svg.png",
+    logo: "https://www.unfpa.org/sites/default/files/styles/common_style/public/resources-pdfpreview/205a4f39380411d49597c5a4ae145d72.png?itok=gRZphvqM",
   },
   {
     name: "Cradle to Cradle",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Cradle_to_Cradle_Certified_Logo.png/240px-Cradle_to_Cradle_Certified_Logo.png",
+    logo: "https://th.bing.com/th/id/OIP.LUV3y3RDB8em74CHu-vMuAHaFu?rs=1&pid=ImgDetMain",
   },
   {
     name: "FSC Certified",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/FSC_Logo.svg/240px-FSC_Logo.svg.png",
+    logo: "https://th.bing.com/th/id/OIP.n6LFZ1rWwrDLn1CFtG79yAHaFt?rs=1&pid=ImgDetMain",
   },
   {
     name: "1% For The Planet",
