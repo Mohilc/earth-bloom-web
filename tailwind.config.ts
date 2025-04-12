@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,16 +53,18 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				// Custom colors for Sustainable Futures
+				eco: {
+					green: {
+						light: '#8FB98B',
+						DEFAULT: '#4A6F44',
+						dark: '#3B5E3F'
+					},
+					beige: '#F5F1E8',
+					sand: '#D9C9B1',
+					clay: '#BC8F6A',
+					sky: '#87CEEB'
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +87,32 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				'leaf-sway': {
+          '0%, 100%': { transform: 'rotate(-2deg)' },
+          '50%': { transform: 'rotate(2deg)' },
+        },
+        'fade-in-up': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(10px)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)'
+          },
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'leaf-sway': 'leaf-sway 6s ease-in-out infinite',
+        'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
+			},
+			fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+      },
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
