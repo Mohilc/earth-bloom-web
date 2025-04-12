@@ -9,11 +9,11 @@ const productImages = [
     alt: "Sustainable bamboo product",
   },
   {
-    url: "https://images.unsplash.com/photo-1544003484-3cd181d137b5?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3",
+    url: "https://unsplash.com/photos/craft-paper-bag-mockup-with-green-leaves-on-pink-background-zero-waste-concept-b2sAqiQh4iE",
     alt: "Eco-friendly packaging",
   },
   {
-    url: "https://images.unsplash.com/photo-1560686153-6e0ad4473a46?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3",
+    url: "https://plus.unsplash.com/premium_photo-1737040941608-9850b9d1dd78?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Product in use",
   },
 ];
