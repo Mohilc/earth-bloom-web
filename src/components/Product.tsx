@@ -5,19 +5,18 @@ import { Button } from '@/components/ui/button';
 
 const productImages = [
   {
-    url: "https://images.unsplash.com/photo-1590080876009-7f6b8cbdff3b?auto=format&fit=crop&w=1200&q=80",
+    url: "https://unsplash.com/photos/brown-wooden-sticks-in-gray-ceramic-bowl-7TgbRVEYdYY",
     alt: "Sustainable bamboo product",
   },
   {
-    url: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=1200&q=80",
+    url: "https://unsplash.com/photos/craft-paper-bag-mockup-with-green-leaves-on-pink-background-zero-waste-concept-b2sAqiQh4iE",
     alt: "Eco-friendly packaging",
   },
   {
-    url: "https://images.unsplash.com/photo-1580910051073-3b7b3cf6ab2f?auto=format&fit=crop&w=1200&q=80",
+    url: "https://plus.unsplash.com/premium_photo-1737040941608-9850b9d1dd78?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Product in use",
   },
 ];
-
 
 const Product = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -52,9 +51,9 @@ const Product = () => {
               {productImages.map((image, index) => (
                 <div 
                   key={index}
-                  className={`absolute inset-0 transition-opacity duration-500 ${
+                  className={absolute inset-0 transition-opacity duration-500 ${
                     index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-                  }`}
+                  }}
                 >
                   <img 
                     src={image.url} 
@@ -70,10 +69,10 @@ const Product = () => {
                   <button
                     key={index}
                     onClick={() => setCurrentImageIndex(index)}
-                    className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                    className={w-2.5 h-2.5 rounded-full transition-colors ${
                       index === currentImageIndex ? 'bg-white' : 'bg-white/50'
-                    }`}
-                    aria-label={`Go to slide ${index + 1}`}
+                    }}
+                    aria-label={Go to slide ${index + 1}}
                   />
                 ))}
               </div>
