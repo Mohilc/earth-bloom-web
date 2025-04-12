@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 
 const productImages = [
   {
-    url: "https://images.unsplash.com/photo-1602532305019-e3abf5353cec?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3",
+    url: "https://unsplash.com/photos/brown-wooden-sticks-in-gray-ceramic-bowl-7TgbRVEYdYY",
     alt: "Sustainable bamboo product",
   },
   {
