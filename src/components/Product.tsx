@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+
 const productImages = [
   {
     url: "https://images.unsplash.com/photo-1590080876009-7f6b8cbdff3b?auto=format&fit=crop&w=1200&q=80",
@@ -16,7 +17,6 @@ const productImages = [
     alt: "Product in use",
   },
 ];
-
 
 
 const Product = () => {
