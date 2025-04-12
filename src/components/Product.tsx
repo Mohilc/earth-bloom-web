@@ -4,19 +4,18 @@ import { Button } from '@/components/ui/button';
 
 const productImages = [
   {
-    url: "https://images.unsplash.com/photo-1589365252845-092198ba5334?auto=format&fit=crop&w=1200&q=80",
+    url: "https://images.unsplash.com/photo-1590080876009-7f6b8cbdff3b?auto=format&fit=crop&w=1200&q=80",
     alt: "Sustainable bamboo product",
   },
   {
-    url: "#",
+    url: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=1200&q=80",
     alt: "Eco-friendly packaging",
   },
   {
-    url: "https://images.unsplash.com/photo-1616628182503-1b9206c0d516?auto=format&fit=crop&w=1200&q=80",
+    url: "https://images.unsplash.com/photo-1580910051073-3b7b3cf6ab2f?auto=format&fit=crop&w=1200&q=80",
     alt: "Product in use",
   },
 ];
-
 const Product = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
