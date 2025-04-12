@@ -1,47 +1,49 @@
-
-import React from 'react';
-import { Star } from 'lucide-react';
+import React from "react";
+import { Star } from "lucide-react";
 
 const testimonials = [
   {
     name: "Sarah Johnson",
     title: "Environmental Activist",
-    quote: "Finally, a company that understands sustainability isn't just a buzzword. Their products have transformed how I think about everyday essentials.",
+    quote:
+      "Finally, a company that understands sustainability isn't just a buzzword. Their products have transformed how I think about everyday essentials.",
     avatar: "https://randomuser.me/api/portraits/women/32.jpg",
     rating: 5,
   },
   {
     name: "Michael Chen",
     title: "Design Enthusiast",
-    quote: "The perfect blend of functionality and eco-conscious design. I love that I don't have to sacrifice aesthetics for sustainability.",
+    quote:
+      "The perfect blend of functionality and eco-conscious design. I love that I don't have to sacrifice aesthetics for sustainability.",
     avatar: "https://randomuser.me/api/portraits/men/46.jpg",
     rating: 5,
   },
   {
     name: "Emily Rodriguez",
     title: "Conscious Consumer",
-    quote: "The quality exceeds my expectations. It's refreshing to find products that are both beautiful and truly sustainable.",
+    quote:
+      "The quality exceeds my expectations. It's refreshing to find products that are both beautiful and truly sustainable.",
     avatar: "https://randomuser.me/api/portraits/women/65.jpg",
     rating: 4,
-  }
+  },
 ];
 
 const certifications = [
   {
     name: "Climate Neutral",
-    logo: "https://www.unfpa.org/sites/default/files/styles/common_style/public/resources-pdfpreview/205a4f39380411d49597c5a4ae145d72.png?itok=gRZphvqM",
+    logo: "/images/climate-neutral.png", // Replace with actual local path
   },
   {
     name: "Cradle to Cradle",
-    logo: "https://th.bing.com/th/id/OIP.LUV3y3RDB8em74CHu-vMuAHaFu?rs=1&pid=ImgDetMain",
+    logo: "/images/cradle-to-cradle.png",
   },
   {
     name: "FSC Certified",
-    logo: "https://th.bing.com/th/id/OIP.n6LFZ1rWwrDLn1CFtG79yAHaFt?rs=1&pid=ImgDetMain",
+    logo: "/images/fsc-certified.png",
   },
   {
     name: "1% For The Planet",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/1_percent_for_the_planet_logo.svg/240px-1_percent_for_the_planet_logo.svg.png",
+    logo: "/images/1-percent-for-the-planet.png",
   },
 ];
 
@@ -63,29 +65,30 @@ const Testimonials = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="bg-eco-beige p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="flex items-center space-x-1 text-yellow-500 mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <Star 
-                    key={i} 
-                    size={16} 
-                    fill={i < testimonial.rating ? "currentColor" : "none"} 
+                  <Star
+                    key={i}
+                    size={16}
+                    fill={i < testimonial.rating ? "currentColor" : "none"}
                   />
                 ))}
               </div>
-              
+
               <p className="text-muted-foreground mb-6 italic">
                 "{testimonial.quote}"
               </p>
-              
+
               <div className="flex items-center">
-                <img 
-                  src={testimonial.avatar} 
-                  alt={testimonial.name} 
+                <img
+                  src={testimonial.avatar}
+                  alt={testimonial.name}
                   className="h-12 w-12 rounded-full mr-4"
+                  onError={(e) => (e.target.src = "https://via.placeholder.com/48")}
                 />
                 <div>
                   <h4 className="font-medium text-foreground">{testimonial.name}</h4>
@@ -102,14 +105,15 @@ const Testimonials = () => {
               Trusted Certifications
             </h3>
           </div>
-          
+
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
             {certifications.map((cert, index) => (
-              <div key={index} className="grayscale hover:grayscale-0 transition-all">
-                <img 
-                  src={cert.logo} 
-                  alt={cert.name} 
+              <div key={index} className="transition-all">
+                <img
+                  src={cert.logo}
+                  alt={cert.name}
                   className="h-16 object-contain"
+                  onError={(e) => (e.target.src = "https://via.placeholder.com/64")}
                 />
               </div>
             ))}
