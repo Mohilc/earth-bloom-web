@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Star, Shield, BadgeCheck, Award } from "lucide-react";
+import { Star, Shield, BadgeCheck, Award, Check } from "lucide-react";
 
 const testimonials = [
   {
@@ -58,91 +58,121 @@ const certifications = [
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="section-padding bg-white">
-      <div className="container-padding max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+    <section id="testimonials" className="section-padding bg-leaf-pattern relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-white/95 to-white/90"></div>
+      
+      <div className="container-padding max-w-7xl mx-auto relative z-10">
+        <div className="text-center mb-16 slide-up">
           <div className="inline-block px-4 py-1 rounded-full bg-eco-green/10 text-eco-green font-medium text-sm mb-6">
-            Testimonials
+            What People Say
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            What Our Community Says
+            Join Our Community of <span className="text-eco-green">Eco-Enthusiasts</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
-            Join thousands of eco-conscious individuals who have made the switch to sustainable living.
+            Hear from people who have made the switch to sustainable living and discover 
+            how our products have made a difference in their everyday lives.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Decorative Elements */}
+        <div className="absolute top-12 left-4 w-20 h-20 rounded-full bg-eco-green opacity-5 animate-pulse"></div>
+        <div className="absolute bottom-24 right-8 w-32 h-32 rounded-full bg-eco-sand opacity-10 animate-pulse"></div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 slide-up-delay-1">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-eco-beige p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-eco-beige/50 group"
             >
-              <div className="flex items-center space-x-1 text-yellow-500 mb-4">
+              <div className="flex items-center space-x-1 text-yellow-500 mb-6 group-hover:scale-105 transition-transform">
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
-                    size={16}
+                    size={18}
                     fill={i < testimonial.rating ? "currentColor" : "none"}
+                    strokeWidth={1.5}
+                    className="transition-all duration-300"
                   />
                 ))}
               </div>
 
-              <p className="text-muted-foreground mb-6 italic">
+              <p className="text-foreground font-medium mb-8 text-lg italic leading-relaxed">
                 "{testimonial.quote}"
               </p>
 
-              <div className="flex items-center">
-                <img
-                  src={testimonial.avatar}
-                  alt={testimonial.name}
-                  className="h-12 w-12 rounded-full mr-4"
-                  onError={(e) => {
-                    const imgElement = e.currentTarget as HTMLImageElement;
-                    imgElement.src = "https://via.placeholder.com/48";
-                  }}
-                />
+              <div className="flex items-center mt-auto">
+                <div className="relative mr-5">
+                  <img
+                    src={testimonial.avatar}
+                    alt={testimonial.name}
+                    className="h-16 w-16 rounded-full object-cover border-2 border-eco-green/20 group-hover:border-eco-green transition-colors"
+                    onError={(e) => {
+                      const imgElement = e.currentTarget as HTMLImageElement;
+                      imgElement.src = "https://via.placeholder.com/64?text=User";
+                    }}
+                  />
+                  <div className="absolute -bottom-1 -right-1 bg-eco-green text-white rounded-full p-1 shadow-md">
+                    <Check size={12} />
+                  </div>
+                </div>
                 <div>
-                  <h4 className="font-medium text-foreground">{testimonial.name}</h4>
-                  <p className="text-sm text-muted-foreground">{testimonial.title}</p>
+                  <h4 className="font-semibold text-foreground text-lg">{testimonial.name}</h4>
+                  <p className="text-sm text-eco-green">{testimonial.title}</p>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-20">
-          <div className="text-center mb-10">
-            <h3 className="text-2xl font-semibold text-eco-green mb-4">
-              Trusted Certifications
+        <div className="mt-24 relative slide-up-delay-2">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-semibold text-eco-green-dark mb-4">
+              Our Sustainability Certifications
             </h3>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Our commitment to sustainability is validated by world-renowned certifications
+              Our commitment to environmental responsibility is validated by 
+              these world-renowned sustainability certifications
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 max-w-5xl mx-auto">
             {certifications.map((cert, index) => (
               <div 
                 key={index} 
-                className="flex flex-col items-center text-center p-6 bg-eco-beige/50 rounded-xl hover:shadow-md transition-all group"
+                className="flex flex-col items-center text-center p-6 md:p-8 bg-white rounded-2xl border border-eco-beige hover:border-eco-green/30 transition-all group relative overflow-hidden"
               >
-                <div className="mb-4 text-eco-green/80 group-hover:text-eco-green transition-colors">
-                  <cert.icon size={48} strokeWidth={1.5} />
+                {/* Background decoration */}
+                <div className="absolute inset-0 bg-eco-green/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                
+                <div className="relative z-10">
+                  <div className="mb-5 p-4 rounded-full bg-eco-green/10 text-eco-green group-hover:bg-eco-green/20 transition-colors">
+                    <cert.icon size={28} strokeWidth={1.5} />
+                  </div>
+                  
+                  <div className="h-20 mb-5 flex items-center justify-center">
+                    <img
+                      src={cert.logo}
+                      alt={cert.name}
+                      className="max-h-20 object-contain grayscale group-hover:grayscale-0 transition-all duration-500"
+                      onError={(e) => {
+                        const imgElement = e.currentTarget as HTMLImageElement;
+                        imgElement.src = "https://via.placeholder.com/150?text=" + encodeURIComponent(cert.name);
+                      }}
+                    />
+                  </div>
+                  
+                  <h4 className="font-semibold text-foreground mb-3 group-hover:text-eco-green transition-colors">{cert.name}</h4>
+                  <p className="text-sm text-muted-foreground">{cert.description}</p>
                 </div>
-                <img
-                  src={cert.logo}
-                  alt={cert.name}
-                  className="h-20 object-contain mb-4 grayscale group-hover:grayscale-0 transition-all"
-                  onError={(e) => {
-                    const imgElement = e.currentTarget as HTMLImageElement;
-                    imgElement.src = "https://via.placeholder.com/150?text=" + encodeURIComponent(cert.name);
-                  }}
-                />
-                <h4 className="font-semibold text-eco-green mb-2">{cert.name}</h4>
-                <p className="text-sm text-muted-foreground">{cert.description}</p>
               </div>
             ))}
+          </div>
+          
+          <div className="mt-16 text-center">
+            <p className="text-sm text-muted-foreground italic">
+              We're constantly working to improve our environmental impact and add more certifications to our portfolio.
+            </p>
           </div>
         </div>
       </div>
