@@ -1,39 +1,39 @@
+
 import React, { useState } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
-const ProductGallery = () => {
-  const productImages = [
-    {
-      url: "https://images.unsplash.com/photo-1590080876009-7f6b8cbdff3b?auto=format&fit=crop&w=1200&q=80",
-      alt: "Sustainable bamboo product",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=1200&q=80",
-      alt: "Eco-friendly packaging",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1580910051073-3b7b3cf6ab2f?auto=format&fit=crop&w=1200&q=80",
-      alt: "Product in use",
-    },
-  ];
+const productImages = [
+  {
+    url: "https://images.unsplash.com/photo-1590080876009-7f6b8cbdff3b?auto=format&fit=crop&w=1200&q=80",
+    alt: "Sustainable bamboo product",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=1200&q=80",
+    alt: "Eco-friendly packaging",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1580910051073-3b7b3cf6ab2f?auto=format&fit=crop&w=1200&q=80",
+    alt: "Product in use",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80",
+    alt: "Sustainable product materials",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1504194921103-f8b80cadd5e4?auto=format&fit=crop&w=1200&q=80",
+    alt: "Product with plant elements",
+  },
+];
 
-  return (
-    <div className="flex gap-4">
-      {productImages.map((img, index) => (
-        <img
-          key={index}
-          src={img.url}
-          alt={img.alt}
-          className="w-60 rounded-xl"
-        />
-      ))}
-    </div>
-  );
-};
-
-export default ProductGallery;
-#
 const Product = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -63,51 +63,38 @@ const Product = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
           {/* Left column - Image carousel */}
           <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative">
-              {productImages.map((image, index) => (
-                <div 
+            <div className="rounded-2xl overflow-hidden shadow-xl relative">
+              <Carousel className="w-full max-w-full">
+                <CarouselContent>
+                  {productImages.map((image, index) => (
+                    <CarouselItem key={index}>
+                      <AspectRatio ratio={4/3} className="bg-muted">
+                        <img 
+                          src={image.url} 
+                          alt={image.alt}
+                          className="w-full h-full object-cover rounded-md"
+                        />
+                      </AspectRatio>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-4 bg-white/80 hover:bg-white" />
+                <CarouselNext className="right-4 bg-white/80 hover:bg-white" />
+              </Carousel>
+            </div>
+            
+            {/* Image thumbnail navigation */}
+            <div className="mt-4 flex space-x-2 justify-center">
+              {productImages.map((_, index) => (
+                <button
                   key={index}
-                  className={absolute inset-0 transition-opacity duration-500 ${
-                    index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-                  }}
-                >
-                  <img 
-                    src={image.url} 
-                    alt={image.alt}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+                  onClick={() => setCurrentImageIndex(index)}
+                  className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                    index === currentImageIndex ? 'bg-eco-green' : 'bg-eco-green/30'
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
               ))}
-              
-              {/* Carousel controls */}
-              <div className="absolute inset-x-0 bottom-4 flex justify-center space-x-2">
-                {productImages.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentImageIndex(index)}
-                    className={w-2.5 h-2.5 rounded-full transition-colors ${
-                      index === currentImageIndex ? 'bg-white' : 'bg-white/50'
-                    }}
-                    aria-label={Go to slide ${index + 1}}
-                  />
-                ))}
-              </div>
-
-              <button 
-                onClick={prevImage} 
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center text-foreground hover:bg-white transition-colors"
-                aria-label="Previous image"
-              >
-                <ArrowLeft size={20} />
-              </button>
-              
-              <button 
-                onClick={nextImage} 
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center text-foreground hover:bg-white transition-colors"
-                aria-label="Next image"
-              >
-                <ArrowRight size={20} />
-              </button>
             </div>
           </div>
           
