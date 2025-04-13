@@ -1,6 +1,5 @@
-
 import React from "react";
-import { Star } from "lucide-react";
+import { Star, Shield, BadgeCheck, CertificateIcon } from "lucide-react";
 
 const testimonials = [
   {
@@ -28,24 +27,34 @@ const testimonials = [
     rating: 4,
   },
 ];
+
 const certifications = [
   {
     name: "Climate Neutral",
-    logo: "https://via.placeholder.com/64?text=CN",
+    logo: "https://via.placeholder.com/150?text=Climate+Neutral",
+    icon: Shield,
+    description: "Carbon Neutrality Certified"
   },
   {
     name: "Cradle to Cradle",
-    logo: "https://via.placeholder.com/64?text=C2C",
+    logo: "https://via.placeholder.com/150?text=Cradle+to+Cradle",
+    icon: BadgeCheck,
+    description: "Circular Economy Standard"
   },
   {
     name: "FSC Certified",
-    logo: "https://via.placeholder.com/64?text=FSC",
+    logo: "https://via.placeholder.com/150?text=FSC+Certified",
+    icon: CertificateIcon,
+    description: "Responsible Forest Management"
   },
   {
     name: "1% For The Planet",
-    logo: "https://via.placeholder.com/64?text=1P",
-  },
+    logo: "https://via.placeholder.com/150?text=1%+For+The+Planet",
+    icon: Star,
+    description: "Environmental Giving Commitment"
+  }
 ];
+
 const Testimonials = () => {
   return (
     <section id="testimonials" className="section-padding bg-white">
@@ -103,23 +112,34 @@ const Testimonials = () => {
 
         <div className="mt-20">
           <div className="text-center mb-10">
-            <h3 className="text-xl font-medium text-foreground">
+            <h3 className="text-2xl font-semibold text-eco-green mb-4">
               Trusted Certifications
             </h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Our commitment to sustainability is validated by world-renowned certifications
+            </p>
           </div>
 
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {certifications.map((cert, index) => (
-              <div key={index} className="transition-all">
+              <div 
+                key={index} 
+                className="flex flex-col items-center text-center p-6 bg-eco-beige/50 rounded-xl hover:shadow-md transition-all group"
+              >
+                <div className="mb-4 text-eco-green/80 group-hover:text-eco-green transition-colors">
+                  <cert.icon size={48} strokeWidth={1.5} />
+                </div>
                 <img
                   src={cert.logo}
                   alt={cert.name}
-                  className="h-16 object-contain"
+                  className="h-20 object-contain mb-4 grayscale group-hover:grayscale-0 transition-all"
                   onError={(e) => {
                     const imgElement = e.currentTarget as HTMLImageElement;
-                    imgElement.src = "https://via.placeholder.com/64";
+                    imgElement.src = "https://via.placeholder.com/150?text=" + encodeURIComponent(cert.name);
                   }}
                 />
+                <h4 className="font-semibold text-eco-green mb-2">{cert.name}</h4>
+                <p className="text-sm text-muted-foreground">{cert.description}</p>
               </div>
             ))}
           </div>
