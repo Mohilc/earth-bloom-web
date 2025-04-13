@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Star } from "lucide-react";
 
@@ -86,7 +87,10 @@ const Testimonials = () => {
                   src={testimonial.avatar}
                   alt={testimonial.name}
                   className="h-12 w-12 rounded-full mr-4"
-                  onError={(e) => (e.target.src = "https://via.placeholder.com/48")}
+                  onError={(e) => {
+                    const imgElement = e.currentTarget as HTMLImageElement;
+                    imgElement.src = "https://via.placeholder.com/48";
+                  }}
                 />
                 <div>
                   <h4 className="font-medium text-foreground">{testimonial.name}</h4>
@@ -111,7 +115,10 @@ const Testimonials = () => {
                   src={cert.logo}
                   alt={cert.name}
                   className="h-16 object-contain"
-                  onError={(e) => (e.target.src = "https://via.placeholder.com/64")}
+                  onError={(e) => {
+                    const imgElement = e.currentTarget as HTMLImageElement;
+                    imgElement.src = "https://via.placeholder.com/64";
+                  }}
                 />
               </div>
             ))}

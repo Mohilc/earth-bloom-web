@@ -43,6 +43,10 @@ const ImageGallery = ({
               src={image.url} 
               alt={image.alt} 
               className="w-full h-full object-cover"
+              onError={(e) => {
+                const imgElement = e.currentTarget as HTMLImageElement;
+                imgElement.src = "https://via.placeholder.com/800x600?text=Image+Not+Found";
+              }}
             />
           </AspectRatio>
           {image.caption && (
