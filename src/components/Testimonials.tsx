@@ -1,5 +1,6 @@
+
 import React from "react";
-import { Star, Shield, BadgeCheck, CertificateIcon } from "lucide-react";
+import { Star, Shield, BadgeCheck, Award } from "lucide-react";
 
 const testimonials = [
   {
@@ -44,7 +45,7 @@ const certifications = [
   {
     name: "FSC Certified",
     logo: "https://via.placeholder.com/150?text=FSC+Certified",
-    icon: CertificateIcon,
+    icon: Award,
     description: "Responsible Forest Management"
   },
   {
