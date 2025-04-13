@@ -11,7 +11,7 @@ From carbon-negative supply chains to biodesign and regenerative finance, this i
 
 
 ## **Link to figma file**
-Add the link here
+https://www.figma.com/design/4Qj4iDJ50M34c54qLPyzll/Untitled?node-id=0-1&t=H1EQJdfDwDZJyZIW-1
 
 ## **Hosted url**
 https://earth-bloom-web.vercel.app/#testimonials
