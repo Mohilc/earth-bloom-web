@@ -1,73 +1,62 @@
-# Welcome to your Lovable project
+Sustainable Futures(design.png)
+# **Sustainable Futures**
 
-## Project info
 
-**URL**: https://lovable.dev/projects/8ad5c4e0-e6ae-48bf-9c58-d306706dcdd4
+**DESIGN.EXE designathon 2025**
 
-## How can I edit this code?
+> 🌍 Sustainable Futures
+Sustainable Futures is a next-gen innovation framework for building regenerative, circular, and climate-positive solutions. We focus on turning sustainability into a competitive advantage — designing scalable, inclusive, and resilient products, systems, and experiences that drive long-term impact.
 
-There are several ways of editing your application.
+From carbon-negative supply chains to biodesign and regenerative finance, this is where bold ideas meet systemic transformation..
 
-**Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8ad5c4e0-e6ae-48bf-9c58-d306706dcdd4) and start prompting.
+## **Link to figma file**
+Add the link here
 
-Changes made via Lovable will be committed automatically to this repo.
+## **Hosted url**
+https://earth-bloom-web.vercel.app/#testimonials
 
-**Use your preferred IDE**
+## **Installation**
+How on earth can we set up your project up and running?
+🔁 1. Clone the Future
+git clone https://github.com/your-org/sustainable-futures.git
+cd sustainable-futures
+git clone https://github.com/your-org/sustainable-futures.git
+cd sustainable-futures
+📦 2. Install the Magic
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+npm install
+# or
+yarn
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## **Steps to run**  
+Care to explain?
+npm install
+# or
+yarn
+## **Acknowledgements**
+🙌 Credits & Inspirations
+This project is built with curiosity, ambition — and a whole lot of love. 💚 Big thanks to the tools, tutorials, and creators who helped bring Sustainable Futures to life:
 
-Follow these steps:
+React – The soul of our interactive journey
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Tailwind CSS – Utility meets beauty
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Next.js – Where speed meets structure
 
-# Step 3: Install the necessary dependencies.
-npm i
+Framer Motion – For joyful, fluid motion
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Vercel – Deployment that feels like magic
 
-**Edit a file directly in GitHub**
+Heroicons – Sharp, accessible iconography
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+shadcn/ui – UI built with care, composability, and clarity
 
-**Use GitHub Codespaces**
+Lovable learning from:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Josh W. Comeau – A masterclass in playful UX
 
-## What technologies are used for this project?
+Frontend Masters – Where devs level up
 
-This project is built with:
+Smashing Magazine – Evergreen design wisdom
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/8ad5c4e0-e6ae-48bf-9c58-d306706dcdd4) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes it is!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
